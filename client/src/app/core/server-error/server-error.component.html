@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h4>Internelt Server Error - refreshing the page will make exception disappear</h4>
+
+  <ng-container *ngIf="error">
+    <h5 class="text-danger">
+      Error: {{ error.Message }}
+    </h5>
+    <p class="font-weight-bold">
+      Note if you are seeing this error angular is probably not responsible
+    </p>
+    <ol>
+      <li> Open chrome devtools</li>
+      <li> Inspect Network tabs</li>
+      <li> Check failing networks</li>
+      <li> Examine this request URL</li>
+      <li> Reproduce error in postman</li>
+    </ol>
+    <code>
+      {{ error.details }}
+    </code>
+  </ng-container>
+</div>
